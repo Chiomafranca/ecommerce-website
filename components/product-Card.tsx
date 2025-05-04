@@ -11,9 +11,8 @@ interface Props {
 }
 
 export const ProductCard = ({ product }: Props) => {
-  console.log(product)
+  console.log(product);
   const price = product?.default_price as Stripe.Price;
-    
 
   return (
     <Link href={`/products/${product.id}`} className="block h-full">
@@ -43,7 +42,9 @@ export const ProductCard = ({ product }: Props) => {
               ${(price.unit_amount / 100).toFixed(2)}
             </p>
           )}
-          <Button className="mt-4 bg-orange-700 text-white">View Details</Button>
+          <Button className="mt-4 bg-orange-700 text-white">
+            View Details
+          </Button>
         </CardContent>
       </Card>
     </Link>

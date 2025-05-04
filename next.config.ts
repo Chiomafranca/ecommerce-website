@@ -2,11 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  images:{
-     domains: [
-       "files.stripe.com",
-     ]
-  }
+  images: {
+    remotePatterns: [new URL("https://assets.example.com/account123/**")],
+    domains: ["files.stripe.com"],
+  },
 };
 
 export default nextConfig;
